@@ -1,0 +1,42 @@
+======================
+Year ||	HTTP Version
+======================
+1991 ||	0.9
+1996 ||	1.0
+1997 ||	1.1
+2015 ||	2.0
+2020 || 3.0
+
+=================================
+Browser JS        ||    NODE JS 
+=================================
+
+1.It has DOM      ||    It has DOM. 
+(Html,css,js)
+2.JS processes    ||    Node processes request object
+response object.
+3. Not headless	  ||    Headless
+
+=============================================
+What happens when we hit the URL in browser
+=============================================
+
+1. Convert the website address into IP address
+2. Browser initiates a TCP connection with the server
+3. Once the Connection is established, Browser will sends an HTTP request to the webserver.
+4. The server handles the request and sends back a http response.
+5. Browser will process the response and renders in browser
+
+=========================================================================================
+HTTP1.1       				        ||    					HTTP2 
+=========================================================================================
+(*)HTTP1.1 uses multiple TCP	    || (*) HTTP/2 can send multiple requests 
+connections to load components	  	||     for data in parallel over a single 
+like .js,.css etc				  	||     TCP connection
+
+(*)Text Commands to process requests || Binary commands to process req/res cycles
+response cycles
+
+(*)Header compression not done       || Header compression is done effectively
+
+

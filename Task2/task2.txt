@@ -1,0 +1,91 @@
+Write up on Copy by value and Copy by reference
+
+=============
+Copy by value
+=============
+ ==> the values are directly copied into the new variables.
+ ==> Variable values are independent and doesnot affect each other
+ ==> Has seperate memory to store values
+ =================
+Copy by reference 
+==================
+==> Value at the address of the memory is passed.
+==> Variables are dependent on each others and a change in one variable value affects the other
+==> Shares the memory for the values
+
+
+
+=============================================
+Copy by Value for composite Data type Array
+=============================================
+
+var a = [1,2,3,4];
+var b =a;
+console.log('b:',b);
+console.log('a:',a);
+console.log("After Assignment using Copy BY reference");
+b[0] = 100;
+console.log('b:',b);
+console.log('a:',a);
+console.log("=============================")
+console.log("New Array Creation");
+var a = [1,2,3,4];
+var b =[...a];
+console.log('b:',b);
+console.log('a:',a);
+console.log("After Assignment");
+b[0]=200;
+console.log("Using Spread Operator");
+console.log('b:',b);
+console.log('a:',a);
+console.log("=============================")
+
+console.log("New Array Creation");
+var a = [1,2,3,4];
+var b =Object.assign([],a);
+console.log('b:',b);
+console.log('a:',a);
+console.log("After Assignment");
+b[0]=200;
+console.log("Using Assignment Operator");
+console.log('b:',b);
+console.log('a:',a);
+
+// Using Json Stringy Method
+var a =  [1,2,3,4];
+var b = JSON.parse(JSON.stringify(a));
+console.log(b);
+b[0]= 888;
+console.log(a);
+console.log(b);
+
+
+
+=============================================
+Copy by Value for composite Data type Object
+=============================================
+
+
+// Using Object Assignment
+
+const target = { a: 1, b: 2 };
+
+var returnedTarget = Object.assign({}, target);
+
+returnedTarget['a']=200;
+
+console.log(target);
+console.log(returnedTarget);
+
+// Using Stringify
+  obj1 = { a: 0 , b: { c: 0}};
+  let obj3 = JSON.parse(JSON.stringify(obj1));
+  obj1.a = 4;
+  obj1.b.c = 4;
+  console.log(JSON.stringify(obj3)); 
+ 
+
+
+
+
+
